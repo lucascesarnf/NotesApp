@@ -15,6 +15,7 @@
 		6829F1A126BB04820069E863 /* NotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6829F19F26BB04820069E863 /* NotesApp.xcdatamodeld */; };
 		6829F1AC26BB04820069E863 /* NotesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6829F1AB26BB04820069E863 /* NotesAppTests.swift */; };
 		6829F1B726BB04820069E863 /* NotesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6829F1B626BB04820069E863 /* NotesAppUITests.swift */; };
+		689A22CC26BB659E008ABE4A /* NoteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689A22CB26BB659E008ABE4A /* NoteSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6829F1B226BB04820069E863 /* NotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6829F1B626BB04820069E863 /* NotesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITests.swift; sourceTree = "<group>"; };
 		6829F1B826BB04820069E863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689A22CB26BB659E008ABE4A /* NoteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +101,9 @@
 		6829F19326BB04800069E863 /* NotesApp */ = {
 			isa = PBXGroup;
 			children = (
-				6829F19426BB04800069E863 /* NotesAppApp.swift */,
-				6829F19626BB04800069E863 /* ContentView.swift */,
-				6829F19826BB04820069E863 /* Assets.xcassets */,
-				6829F19D26BB04820069E863 /* Persistence.swift */,
-				6829F1A226BB04820069E863 /* Info.plist */,
-				6829F19F26BB04820069E863 /* NotesApp.xcdatamodeld */,
+				689A22CA26BB5FC9008ABE4A /* Scene */,
+				689A22C926BB5F99008ABE4A /* Persistence */,
+				689A22C826BB5F7A008ABE4A /* Source */,
 				6829F19A26BB04820069E863 /* Preview Content */,
 			);
 			path = NotesApp;
@@ -134,6 +133,34 @@
 				6829F1B826BB04820069E863 /* Info.plist */,
 			);
 			path = NotesAppUITests;
+			sourceTree = "<group>";
+		};
+		689A22C826BB5F7A008ABE4A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6829F19826BB04820069E863 /* Assets.xcassets */,
+				6829F19426BB04800069E863 /* NotesAppApp.swift */,
+				6829F1A226BB04820069E863 /* Info.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		689A22C926BB5F99008ABE4A /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				6829F19D26BB04820069E863 /* Persistence.swift */,
+				6829F19F26BB04820069E863 /* NotesApp.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		689A22CA26BB5FC9008ABE4A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				6829F19626BB04800069E863 /* ContentView.swift */,
+				689A22CB26BB659E008ABE4A /* NoteSheet.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +296,7 @@
 				6829F19726BB04800069E863 /* ContentView.swift in Sources */,
 				6829F19526BB04800069E863 /* NotesAppApp.swift in Sources */,
 				6829F1A126BB04820069E863 /* NotesApp.xcdatamodeld in Sources */,
+				689A22CC26BB659E008ABE4A /* NoteSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NotesApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NotesApp/Info.plist;
+				INFOPLIST_FILE = NotesApp/Source/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,7 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NotesApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NotesApp/Info.plist;
+				INFOPLIST_FILE = NotesApp/Source/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
